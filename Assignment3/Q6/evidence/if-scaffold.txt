@@ -1,0 +1,20 @@
+Trial 1
+Sum of tokens collected: 210 (expected 210)
+Trial 2
+Sum of tokens collected: 210 (expected 210)
+Trial 3
+Sum of tokens collected: 210 (expected 210)
+Trial 4
+Sum of tokens collected: 210 (expected 210)
+Trial 5
+Sum of tokens collected: 210 (expected 210)
+Trial 6
+Sum of tokens collected: 210 (expected 210)
+Trial 7
+Sum of tokens collected: 210 (expected 210)
+Trial 8
+Sum of tokens collected: 210 (expected 210)
+Trial 9
+Sum of tokens collected: 210 (expected 210)
+Trial 10
+Sum of tokens collected: 210 (expected 210)

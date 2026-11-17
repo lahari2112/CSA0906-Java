@@ -1,0 +1,85 @@
+Initializing jdb ...
+> stop in SalesDemo.buggy
+stop in SalesDemo.buggy
+Deferring breakpoint SalesDemo.buggy.
+It will be set after the class is loaded.
+> run
+run
+run SalesDemo
+Set uncaught java.lang.Throwable
+Set deferred uncaught java.lang.Throwable
+> 
+VM Started: Set deferred breakpoint SalesDemo.buggy
+Reports identical:
+store1.txt,400
+store2.txt,500
+
+
+Breakpoint hit: "thread=main", SalesDemo.buggy(), line=21 bci=0
+21            Writer writer=null;
+
+main[1] next
+next
+> 
+Step completed: "thread=main", SalesDemo.buggy(), line=23 bci=2
+23                writer=new Writer(output);
+
+main[1] next
+next
+> 
+Step completed: "thread=main", SalesDemo.buggy(), line=24 bci=11
+24                for(Path p:inputs){Reader reader=new Reader(p);writer.write(p.getFileName()+","+sum(reader,p)+"\n");reader.close();}
+
+main[1] print SalesDemo.live.size()
+print SalesDemo.live.size()
+ SalesDemo.live.size() = 1
+main[1] catch java.io.IOException
+catch java.io.IOException
+Set all java.io.IOException
+main[1] cont
+cont
+> 
+Exception occurred: java.io.IOException (to be caught at: SalesDemo.buggy(), line=25 bci=94)"thread=main", SalesDemo.sum(), line=17 bci=74
+17                catch(RuntimeException e){throw new IOException("Invalid sale in "+p+" line "+n,e);}}
+
+main[1] where
+where
+  [1] SalesDemo.sum (SalesDemo.java:17)
+  [2] SalesDemo.buggy (SalesDemo.java:24)
+  [3] SalesDemo.main (SalesDemo.java:56)
+main[1] print SalesDemo.live.size()
+print SalesDemo.live.size()
+ SalesDemo.live.size() = 2
+main[1] locals
+locals
+Method arguments:
+r = instance of SalesDemo$Reader(id=685)
+p = instance of sun.nio.fs.UnixPath(id=686)
+Local variables:
+total = 100
+n = 2
+line = "NOT_A_NUMBER"
+e = instance of java.lang.NumberFormatException(id=688)
+main[1] ignore java.io.IOException
+ignore java.io.IOException
+Removed: all java.io.IOException
+main[1] cont
+cont
+> LOG buggy: java.io.IOException: Invalid sale in Q3/input/corrupt.txt line 2
+buggy open tracked file resources=1
+LOG manual: java.io.IOException: Invalid sale in Q3/input/corrupt.txt line 2
+manual open tracked file resources=0
+LOG twr: java.io.IOException: Invalid sale in Q3/input/corrupt.txt line 2
+twr open tracked file resources=0
+Closing second
+Closing first
+java.io.IOException: body failed
+	at SalesDemo.main(SalesDemo.java:62)
+	Suppressed: java.io.IOException: close second
+		at SalesDemo$BadClose.close(SalesDemo.java:46)
+		... 1 more
+	Suppressed: java.io.IOException: close first
+		at SalesDemo$BadClose.close(SalesDemo.java:46)
+		... 1 more
+
+The application exited

@@ -1,0 +1,7 @@
+file,processed,average,grade,error
+a.txt,true,70.0,PASS,""
+b.txt,true,40.0,FAIL,""
+c.txt,true,40.0,PASS,""
+corrupt.txt,false,0.0,,"IllegalArgumentException: Expected three marks"
+d.txt,true,100.0,PASS,""
+missing.txt,false,0.0,,"NoSuchFileException: Q7/input/missing.txt"

@@ -1,0 +1,4 @@
+Q1/invalid_compile/BroadCatch.java:6: error: exception FileNotFoundException has already been caught
+        catch(FileNotFoundException e){System.out.println("narrow");}
+        ^
+1 error
