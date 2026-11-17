@@ -1,0 +1,22 @@
+CASE 1 account=1001 amount=500 file=Q1/card.txt
+Dispensed=500 balance=4500.00
+FINALLY: end session; return simulated card
+CASE 2 account=abc amount=500 file=Q1/card.txt
+MULTI_CATCH: NumberFormatException For input string: "abc"
+FINALLY: end session; return simulated card
+CASE 3 account=1001 amount=abc file=Q1/card.txt
+MULTI_CATCH: NumberFormatException Character a is neither a decimal digit number, decimal point, nor "e" notation exponential mark.
+FINALLY: end session; return simulated card
+CASE 4 account=1001 amount=-10 file=Q1/card.txt
+INVALID_AMOUNT: Amount must be positive with at most 2 decimals
+FINALLY: end session; return simulated card
+CASE 5 account=1001 amount=6000 file=Q1/card.txt
+INSUFFICIENT_FUNDS: Balance is only 5000.00
+FINALLY: end session; return simulated card
+CASE 6 account=1001 amount=100 file=Q1/missing-card.txt
+MULTI_CATCH: NoSuchFileException Q1/missing-card.txt
+FINALLY: end session; return simulated card
+CASE 7 account=9999 amount=100 file=Q1/card.txt
+BAD_ACCOUNT: Unknown account
+FINALLY: end session; return simulated card
+All 7 ATM paths verified

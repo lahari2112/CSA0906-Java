@@ -1,0 +1,14 @@
+AtmDemo: exit 0
+StorageDemo: exit 0
+PortalDemo: exit 0
+SalesDemo: exit 0
+ScannerDemo: exit 0
+SeatBooking: exit 0
+BookingExperiment: exit 0
+TokenCounter: exit 0
+DeadlockDemo: exit 0
+TokenExperiment: exit 0
+ResultProcessor: exit 0
+daemon: exit 0 (uncaught/invalid-catch intentionally nonzero)
+uncaught-stack: exit 1 (uncaught/invalid-catch intentionally nonzero)
+invalid-catch: exit 1 (uncaught/invalid-catch intentionally nonzero)

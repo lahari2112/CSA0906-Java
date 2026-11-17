@@ -1,0 +1,26 @@
+UI: submission accepted
+UI: Exam window has closed
+TYPE=WindowClosedException CAUSE=null
+UI: Student is not registered
+TYPE=NotRegisteredException CAUSE=null
+UI: Answer exceeds 500 KiB
+TYPE=AnswerTooLargeException CAUSE=null
+UI: Could not store submission
+TYPE=SubmissionStorageException CAUSE=java.nio.file.NoSuchFileException: /tmp/exam-demo-110374406280641622/absent-parent/saved.txt
+SubmissionStorageException: Could not store submission
+	at PortalDemo.storage(PortalDemo.java:9)
+	at PortalDemo.service(PortalDemo.java:15)
+	at PortalDemo.controller(PortalDemo.java:20)
+	at PortalDemo.main(PortalDemo.java:36)
+Caused by: java.nio.file.NoSuchFileException: /tmp/exam-demo-110374406280641622/absent-parent/saved.txt
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystem.copyFile(UnixFileSystem.java:673)
+	at java.base/sun.nio.fs.UnixFileSystem.copy(UnixFileSystem.java:1084)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.copy(UnixFileSystemProvider.java:300)
+	at java.base/java.nio.file.Files.copy(Files.java:1305)
+	at PortalDemo.storage(PortalDemo.java:8)
+	... 3 more
+Without chaining getCause()=null
+All 5 portal scenarios verified

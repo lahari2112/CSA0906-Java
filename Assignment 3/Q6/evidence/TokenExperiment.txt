@@ -1,0 +1,22 @@
+while+notifyAll OK count=80 sum=3240
+if+notifyAll trial=1 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=2 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=3 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=4 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=5 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=6 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=7 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=8 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+if+notifyAll trial=9 ERROR NoSuchElementException: null
+if+notifyAll trial=10 TIMEOUT (possible lost progress; not proof of permanent deadlock)
+while+notify trial=1 OK count=80 sum=3240
+while+notify trial=2 OK count=80 sum=3240
+while+notify trial=3 OK count=80 sum=3240
+while+notify trial=4 OK count=80 sum=3240
+while+notify trial=5 OK count=80 sum=3240
+while+notify trial=6 OK count=80 sum=3240
+while+notify trial=7 OK count=80 sum=3240
+while+notify trial=8 OK count=80 sum=3240
+while+notify trial=9 OK count=80 sum=3240
+while+notify trial=10 OK count=80 sum=3240
+ArrayBlockingQueue sum=210

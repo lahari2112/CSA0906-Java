@@ -1,0 +1,20 @@
+Trial 1
+Seats sold: 10
+Trial 2
+Seats sold: 10
+Trial 3
+Seats sold: 10
+Trial 4
+Seats sold: 10
+Trial 5
+Seats sold: 10
+Trial 6
+Seats sold: 10
+Trial 7
+Seats sold: 10
+Trial 8
+Seats sold: 10
+Trial 9
+Seats sold: 10
+Trial 10
+Seats sold: 10

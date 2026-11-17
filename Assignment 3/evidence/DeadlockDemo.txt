@@ -1,0 +1,21 @@
+Detected deadlocked threads=2
+"unsafe-A-to-B" daemon prio=5 Id=20 BLOCKED on DeadlockDemo$Wallet@2d98a335 owned by "unsafe-B-to-A" Id=21
+	at app//DeadlockDemo.lambda$main$0(DeadlockDemo.java:12)
+	-  blocked on DeadlockDemo$Wallet@2d98a335
+	-  locked DeadlockDemo$Wallet@568db2f2
+	at app//DeadlockDemo$$Lambda/0x00007ff3d4000c10.run(Unknown Source)
+	at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+	at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+
+
+"unsafe-B-to-A" daemon prio=5 Id=21 BLOCKED on DeadlockDemo$Wallet@568db2f2 owned by "unsafe-A-to-B" Id=20
+	at app//DeadlockDemo.lambda$main$1(DeadlockDemo.java:13)
+	-  blocked on DeadlockDemo$Wallet@568db2f2
+	-  locked DeadlockDemo$Wallet@2d98a335
+	at app//DeadlockDemo$$Lambda/0x00007ff3d4001000.run(Unknown Source)
+	at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+	at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+
+
+Ordered transfers complete: total=20000 balances=10000,10000
+Unsafe daemon threads remain blocked until this demonstration JVM exits.

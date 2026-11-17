@@ -1,0 +1,36 @@
+before start=NEW alive=false
+after start=RUNNABLE alive=true
+Thread,1,false,"[1, 2, 4, 3]",40
+after join=TERMINATED alive=false
+Thread,2,false,"[3, 1, 2, 4]",40
+Thread,3,false,"[1, 2, 4, 3]",40
+Thread,4,false,"[2, 1, 4, 3]",40
+Thread,5,false,"[1, 3, 2, 4]",40
+Thread,6,false,"[1, 2, 3, 4]",40
+Thread,7,false,"[1, 2, 3, 4]",40
+Thread,8,false,"[1, 2, 3, 4]",40
+Thread,9,false,"[1, 2, 3, 4]",40
+Thread,10,false,"[1, 2, 3, 4]",40
+Thread,1,true,"[2, 1, 4, 3]",40
+Thread,2,true,"[1, 4, 3, 2]",40
+Thread,3,true,"[2, 1, 3, 4]",40
+Thread,4,true,"[3, 2, 1, 4]",40
+Thread,5,true,"[1, 2, 3, 4]",40
+Thread,6,true,"[1, 2, 3, 4]",40
+Thread,7,true,"[1, 3, 2, 4]",40
+Thread,8,true,"[1, 2, 3, 4]",40
+Thread,9,true,"[1, 2, 3, 4]",40
+Thread,10,true,"[2, 1, 3, 4]",40
+Runnable,1,false,"[1, 2, 4, 3]",40
+Runnable,2,false,"[1, 2, 4, 3]",40
+Runnable,3,false,"[1, 3, 2, 4]",40
+Runnable,4,false,"[2, 3, 4, 1]",40
+Runnable,5,false,"[1, 2, 3, 4]",40
+Runnable,6,false,"[1, 3, 4, 2]",40
+Runnable,7,false,"[1, 2, 3, 4]",40
+Runnable,8,false,"[1, 2, 4, 3]",40
+Runnable,9,false,"[1, 2, 3, 4]",40
+Runnable,10,false,"[1, 2, 3, 4]",40
+run() executes on main
+After direct run: state=NEW alive=false
+Executor total=40

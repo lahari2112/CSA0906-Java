@@ -1,0 +1,2 @@
+daemon began
+main ends without joining daemon

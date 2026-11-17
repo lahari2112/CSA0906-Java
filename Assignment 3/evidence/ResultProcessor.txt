@@ -1,0 +1,19 @@
+Outcome[id=a.txt, success=true, average=70.0, grade=PASS, error=]
+Outcome[id=b.txt, success=true, average=40.0, grade=FAIL, error=]
+Outcome[id=c.txt, success=true, average=40.0, grade=PASS, error=]
+Outcome[id=corrupt.txt, success=false, average=0.0, grade=, error=IllegalArgumentException: Expected three marks]
+Outcome[id=d.txt, success=true, average=100.0, grade=PASS, error=]
+Outcome[id=missing.txt, success=false, average=0.0, grade=, error=NoSuchFileException: Q7/input/missing.txt]
+1,1,10000,9800,200,500.891902
+1,2,10000,9800,200,137.487817
+1,4,10000,9800,200,145.872302
+1,8,10000,9800,200,75.134371
+2,8,10000,9800,200,52.164258
+2,4,10000,9800,200,44.223166
+2,2,10000,9800,200,72.524731
+2,1,10000,9800,200,157.099149
+3,2,10000,9800,200,98.799824
+3,8,10000,9800,200,44.610835
+3,1,10000,9800,200,179.23753
+3,4,10000,9800,200,63.164283
+No unhandled per-file failures observed; all summary assertions passed.

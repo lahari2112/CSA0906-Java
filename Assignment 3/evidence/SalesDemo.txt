@@ -1,0 +1,20 @@
+Reports identical:
+store1.txt,400
+store2.txt,500
+
+LOG buggy: java.io.IOException: Invalid sale in Q3/input/corrupt.txt line 2
+buggy open tracked file resources=1
+LOG manual: java.io.IOException: Invalid sale in Q3/input/corrupt.txt line 2
+manual open tracked file resources=0
+LOG twr: java.io.IOException: Invalid sale in Q3/input/corrupt.txt line 2
+twr open tracked file resources=0
+Closing second
+Closing first
+java.io.IOException: body failed
+	at SalesDemo.main(SalesDemo.java:62)
+	Suppressed: java.io.IOException: close second
+		at SalesDemo$BadClose.close(SalesDemo.java:46)
+		... 1 more
+	Suppressed: java.io.IOException: close first
+		at SalesDemo$BadClose.close(SalesDemo.java:46)
+		... 1 more
